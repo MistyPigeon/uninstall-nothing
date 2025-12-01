@@ -1,0 +1,8 @@
+jobs:
+  ci:
+    name: CI
+    runs-on: ubuntu-latest
+    steps:
+      # ...
+      - uses: moonrepo/setup-rust@v1
+      - run: cargo test
