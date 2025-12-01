@@ -130,7 +130,7 @@ Some packages may be protected or have dependencies.  The application will repor
 
 ## License
 
-MIT
+Misty Foundation License v8.3
 
 ## Contributing
 
