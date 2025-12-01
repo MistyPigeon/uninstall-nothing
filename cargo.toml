@@ -1,0 +1,12 @@
+[package]
+name = "uninstall-package"
+version = "0. 1.0"
+edition = "2021"
+authors = ["MistyPigeon"]
+description = "A Linux terminal app that uninstalls packages that don't exist in repositories"
+
+[dependencies]
+
+[[bin]]
+name = "uninstall-package"
+path = "main.rs"
