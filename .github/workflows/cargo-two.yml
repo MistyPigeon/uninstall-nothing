@@ -1,0 +1,5 @@
+- uses: moonrepo/setup-rust@v1
+  with:
+    bins: cargo-nextest, cargo-insta@1.28.0
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
