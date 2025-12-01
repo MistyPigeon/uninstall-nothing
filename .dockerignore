@@ -1,0 +1,22 @@
+target/
+.git/
+.gitignore
+.github/
+.env
+.env. local
+*. swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*. iml
+node_modules/
+dist/
+build/
+README.md
+LICENSE
+. dockerignore
+Dockerfile*
+docker-compose. yml
