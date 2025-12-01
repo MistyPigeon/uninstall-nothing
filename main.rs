@@ -1,11 +1,6 @@
 use std::process::{Command, Stdio};
 use std::io::{self, BufRead};
 use std::collections::HashSet;
-
-fn main() {
-    println!("🗑️  Package Uninstaller - Remove Non-Existent Packages");
-    println!("======================================================\n");
-
     // Detect package manager
     let package_manager = detect_package_manager();
     println!("Detected package manager: {}\n", package_manager);
@@ -29,12 +24,12 @@ fn main() {
         return;
     }
 
-    println! ("Found {} non-existent packages:", non_existent.len());
+    println! ("Found {} packages:", non_existent.len());
     for package in &non_existent {
         println!("  - {}", package);
     }
 
-    println!("\nAttempting to uninstall non-existent packages...\n");
+    println!("\nAttempting to uninstall packages...\n");
 
     // Uninstall non-existent packages
     for package in &non_existent {
