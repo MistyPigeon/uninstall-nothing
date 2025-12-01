@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  uninstall-nothing:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: uninstall-nothing
+    image: mistypigeon/uninstall-package:latest
+    
+    # Run in interactive mode to see output
+    stdin_open: true
+    tty: true
+    
+    # Mount the host system's package database (if needed for testing)
+    volumes:
+      - /var/lib/apt/lists:/var/lib/apt/lists:ro
+      - /var/cache/apt:/var/cache/apt:ro
+    
+    # Capabilities for package management
+    cap_add:
+      - SYS_ADMIN
+    
+    # Security options
+    security_opt:
+      - apparmor=unconfined
+    
+    # Environment
+    environment:
+      - DEBUG=false
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
