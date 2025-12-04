@@ -1,6 +1,6 @@
 # uninstall-package
 
-** CREDITS TO https://github.com/buyukakyuz/install-nothing FOR IDEA**
+**CREDITS TO https://github.com/buyukakyuz/install-nothing FOR IDEA**
 
 A Rust terminal application that identifies and uninstalls Linux packages that no longer exist in your system's package repositories.
 
